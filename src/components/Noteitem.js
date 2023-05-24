@@ -13,11 +13,11 @@ const Noteitem = (props) => {
           {note.tag}
         </span>
         <div className="card-body">
-          <div class="d-flex">
-            <div class="mr-auto p-2">
+          <div className="d-flex">
+            <div className="mr-auto p-2">
               <h5 className="card-title">{note.title}</h5>
             </div>
-            <div class="p-2">
+            <div className="p-2">
               {" "}
               <i
                 className="far fa-trash-alt mx-2 "
@@ -26,7 +26,7 @@ const Noteitem = (props) => {
                 }}
               ></i>
             </div>
-            <div class="p-2">
+            <div className="p-2">
               <i
                 className="far fa-edit mx-2"
                 onClick={() => {

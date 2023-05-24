@@ -1,8 +1,8 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import { Home } from "./components/Home";
-import About from "./components/About";
+import { DashBoard } from "./components/DashBoard";
+import Home from "./components/Home";
 import NoteState from "./context/notes/NoteState";
 // import { Alert } from "./components/Alert";
 import Signup from "./components/Signup";
@@ -15,8 +15,8 @@ function App() {
         <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route path="/" element={<About/>}></Route>
-            <Route path="/about" element={<Home />}></Route>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/dashboard" element={<DashBoard />}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/signup" element={<Signup />}></Route>
           </Routes>

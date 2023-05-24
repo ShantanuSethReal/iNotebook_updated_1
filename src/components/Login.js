@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   localStorage.clear();
-  console.log(localStorage);
+  //console.log(localStorage);
   const [credentials, setCredentials] = useState({ email: "", password: "" });
 
   const navigate = useNavigate();
@@ -18,12 +18,13 @@ const Login = () => {
       body: JSON.stringify({ email: credentials.email, password: credentials.password }),
     });
     const json = await response.json();
-    console.log(json);
+    // console.log(json);
     if (json.success) {
       // Save the auth token and redirect
       localStorage.setItem("token", json.authtoken);
+      localStorage.setItem("user", JSON.stringify({ email: credentials.email, password: credentials.password }));
       //  history.push("/");
-      navigate("/about");
+      navigate("/dashboard");
     } else {
       alert("Invalid credentials");
     }
